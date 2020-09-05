@@ -15,7 +15,7 @@ if ( ! class_exists( 'My_Youtube_Recommendation_Admin' ) ) {
         /**
          * Start up
          */
-        public function __construct( $basename, $slug, $json_filename, $version ) {
+        public function __construct( $basename, $slug, $json_filename ) {
 
             $this->options = get_option( 'my_yt_rec' );
 
