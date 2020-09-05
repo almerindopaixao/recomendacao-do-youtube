@@ -52,11 +52,18 @@
     defined( 'RECOMENDACAO_DO_YOUTUBE_JSON_FILENAME', 'meu-yt-rec.json' );
  }
 
- require_once RECOMENDACAO_DO_YOUTUBE_PLUGIN_DIR . 'includes/class-recomendacao-do-youtube.php';
- require_once RECOMENDACAO_DO_YOUTUBE_PLUGIN_DIR . 'includes/class-recomendacao-do-youtube-json.php';
- require_once RECOMENDACAO_DO_YOUTUBE_PLUGIN_DIR . 'includes/class-recomendacao-do-youtube-shortcode.php';
- require_once RECOMENDACAO_DO_YOUTUBE_PLUGIN_DIR . 'includes/class-recomendacao-do-youtube-widget.php';
+ require_once RECOMENDACAO_DO_YOUTUBE_PLUGIN_DIR . 'includes/class-my-recomendacao-do-youtube.php';
+ require_once RECOMENDACAO_DO_YOUTUBE_PLUGIN_DIR . 'includes/class-my-recomendacao-do-youtube-json.php';
+ require_once RECOMENDACAO_DO_YOUTUBE_PLUGIN_DIR . 'includes/class-my-recomendacao-do-youtube-shortcode.php';
+ require_once RECOMENDACAO_DO_YOUTUBE_PLUGIN_DIR . 'includes/class-my-recomendacao-do-youtube-widget.php';
 
  if ( is_admin() ) {
-   require_once RECOMENDACAO_DO_YOUTUBE_PLUGIN_DIR . 'includes/class-recomendacao-do-youtube-admin.php';
+   require_once RECOMENDACAO_DO_YOUTUBE_PLUGIN_DIR . 'includes/class-my-recomendacao-do-youtube-admin.php';
  }
+
+ $my_yt_rec_admin = new My_Youtube_recommendation_Admin(
+    RECOMENDACAO_DO_YOUTUBE_BASENAME,
+    RECOMENDACAO_DO_YOUTUBE_PLUGIN_SLUG,
+    RECOMENDACAO_DO_YOUTUBE_JSON_FILENAME,
+    RECOMENDACAO_DO_YOUTUBE_VERSION
+ );
